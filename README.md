@@ -1,10 +1,10 @@
 # Projeto - PROJETO ESCOLA
 
 ## Descrição - Estude! Seja capaz de ser o que você quer ser.
-## *Projeto Escola* é uma aplicação que simula a parte financeira de uma escola particular.
+### *Projeto Escola* é uma aplicação que simula a parte financeira de uma escola particular.
 ### Essa aplicação foi feita como forma de estudo e não serve para ser usada para outros fins.
 
-## Esse projeto foi/vai ser desenvolvido com as seguintes tecnologias:
+### Esse projeto foi/vai ser desenvolvido com as seguintes tecnologias:
 
     ReactJs / Typescript / Sass / Styled Components / MirageJs / Axios
 
@@ -38,4 +38,8 @@ npm install axios
 
 Mirage JS é uma biblioteca de simulação de API
 npm install miragejs -D
+
+npm add react-modal
+
+npm add polished
 
