@@ -5,7 +5,7 @@ import trueImg from '../../assets/true.png';
 import falseImg from '../../assets/false.png';
 import { Container, TransactionTypeContainer, RadioBox } from '../NewTransactionModal/style';
 import { api } from '../../services/api';
-import { TransactionsContext } from '../../TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
 
 interface NewTransacionModalProps {
     isOpen: boolean;
@@ -13,7 +13,7 @@ interface NewTransacionModalProps {
 }
 
 export function NewTransacionModal({ isOpen, onRequestClose }: NewTransacionModalProps){
-    const { createTransaction } = useContext(TransactionsContext);
+    const { createTransaction } = useTransactions();
 
 
 
