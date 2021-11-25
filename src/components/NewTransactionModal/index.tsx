@@ -22,15 +22,22 @@ export function NewTransacionModal({ isOpen, onRequestClose }: NewTransacionModa
     const [category, setCategory] = useState('');
     const [type, setType] = useState('deposit');
 
-    function handleCreateNewTransaction(event: FormEvent){
+    async function handleCreateNewTransaction(event: FormEvent){
         event.preventDefault();//Previnir o funcionamento padrão de carregar a página automático ao clicar no submit no html
 
-        createTransaction({
+        await createTransaction({
             title,
             amount,
             category,
             type,
         })
+        
+        setTitle('');
+        setAmount(0);
+        setCategory('');
+        setType('');
+        onRequestClose();
+        
     }
 
     return (
@@ -48,7 +55,7 @@ export function NewTransacionModal({ isOpen, onRequestClose }: NewTransacionModa
                 <img src={closeImg} alt="Fechar modal" className="img-button-close"/>
             </button>
 
-            <Container onClick={handleCreateNewTransaction} >
+            <Container onSubmit={handleCreateNewTransaction} >
                 <h2>Cadastrar Transações</h2>
                 
                 <input 
